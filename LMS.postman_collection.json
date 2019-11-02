@@ -1,0 +1,499 @@
+{
+	"variables": [],
+	"info": {
+		"name": "LMS",
+		"_postman_id": "d13c48bb-b232-83d1-e7fe-e6ddc5bf7181",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addBooks",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookId\":\"\",\n\t\"bookName\":\"\",\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"carogory\":\"\",\n\t\"libraryId\":\"\",\n\t\"rachNo\": \"\",\n\t\"status\":\"\",\n\t\"issuedTo\":\"\",\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "searchBook",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/book?bookName=\"Madolduwa\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"book"
+					],
+					"query": [
+						{
+							"key": "bookName",
+							"value": "\"Madolduwa\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookId\":\"\",\n\t\"bookName\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeBook",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/books?bookName=\"aaa\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"books"
+					],
+					"query": [
+						{
+							"key": "bookName",
+							"value": "\"aaa\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/books?bookName=\"aaa\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"books"
+					],
+					"query": [
+						{
+							"key": "bookName",
+							"value": "\"aaa\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"libraryId\":\"\",\n\t\"rachNo\": \"\",\n\t\"status\":\"\",\n\t\"carogory\":\"\",\n\t\"issuedTo\":\"\",\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addMember",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/members",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"memberId\":\"\",\n\t\"name\":\"\",\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"numberOfBookIssued\":\"\",\n\t\"status\":\"\",\n\t\"description\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "seacrhMember",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/members?memberName=\"Shanaka\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"members"
+					],
+					"query": [
+						{
+							"key": "memberName",
+							"value": "\"Shanaka\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeMember",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/members?memberName=\"Shanaka\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"members"
+					],
+					"query": [
+						{
+							"key": "memberName",
+							"value": "\"Shanaka\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateMember",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/members?memberName=\"Shanaka\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"members"
+					],
+					"query": [
+						{
+							"key": "memberName",
+							"value": "\"Shanaka\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"numberOfBookIssued\":\"\",\n\t\"status\":\"\",\n\t\"description\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addLibrary",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/library",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"libraryId\":\"\",\n\t\"libraryName\":\"\",\n\t\"location\":\"\",\n\t\"address\":\"\",\n\t\"contactNo\":\"\",\n\t\"status\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getLibrary",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryName=\"sliitLibrary\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"library"
+					],
+					"query": [
+						{
+							"key": "libraryName",
+							"value": "\"sliitLibrary\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateLibrary",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryName=\"sliitLibrary\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"library"
+					],
+					"query": [
+						{
+							"key": "libraryName",
+							"value": "\"sliitLibrary\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"libraryName\":\"\",\n\t\"location\":\"\",\n\t\"address\":\"\",\n\t\"contactNo\":\"\",\n\t\"status\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addLibrarian",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/librarian",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"librarianId\":\"\",\n\t\"name\":\"\",\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"allocatedLibraryId\":\"\",\n\t\"status\":\"\",\n\t\"details\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "searchLibrarian",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?librarianName=\"0123\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"librarian"
+					],
+					"query": [
+						{
+							"key": "librarianName",
+							"value": "\"0123\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateLibrarian",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?librarianName=\"0123\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"librarian"
+					],
+					"query": [
+						{
+							"key": "librarianName",
+							"value": "\"0123\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"\",\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"allocatedLibrary\":\"\",\n\t\"status\":\"\",\n\t\"details\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeLibrarian",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?librarianName=\"0123\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"librarian"
+					],
+					"query": [
+						{
+							"key": "librarianName",
+							"value": "\"0123\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

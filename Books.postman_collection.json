@@ -1,0 +1,102 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Books",
+		"_postman_id": "93a4788c-520e-229f-7c46-fddc91454067",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllBooks",
+			"request": {
+				"url": "http://localhost:8080/booksManagement/bookList",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addBook",
+			"request": {
+				"url": "http://localhost:8080/booksManagement/insertBook",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"url": "http://localhost:8080/booksManagement/deleteBook",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"bookId\": \"002\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"url": "http://localhost:8080/booksManagement/updateBook",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"third\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "executeUpdateBook",
+			"request": {
+				"url": "http://localhost:8080/booksManagement/executeUpdateBook",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
