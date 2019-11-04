@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Member",
+		"_postman_id": "a0c7b79f-d238-e48a-998b-d554979529ef",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllMembers",
+			"request": {
+				"url": "http://localhost:8081/memberManagement/memberList",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addMember",
+			"request": {
+				"url": "http://localhost:8081/memberManagement/insertMember",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"memberId\": \"M002\",\n        \"name\": \"Shanaka\",\n        \"nic\": \"912440729v\",\n        \"address\": \"colombo 9\",\n        \"email\": \"shanaka@sliit.lk\",\n        \"contactNo\": \"0750111415\",\n        \"numberOfBookIssued\": \"0\",\n        \"status\": \"active\",\n        \"description\": \"description\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateMember",
+			"request": {
+				"url": "http://localhost:8081/memberManagement/updateMember",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"memberId\": \"M002\",\n        \"name\": \"weerasing\",\n        \"nic\": \"912440729v\",\n        \"address\": \"colombo 9\",\n        \"email\": \"shanaka@sliit.lk\",\n        \"contactNo\": \"0750111415\",\n        \"numberOfBookIssued\": \"0\",\n        \"status\": \"active\",\n        \"description\": \"description\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMember",
+			"request": {
+				"url": "http://localhost:8081/memberManagement/deleteMember",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"memberId\": \"M002\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
