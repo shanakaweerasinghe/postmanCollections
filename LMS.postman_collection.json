@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"bookId\":\"\",\n\t\"bookName\":\"\",\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"carogory\":\"\",\n\t\"libraryId\":\"\",\n\t\"rachNo\": \"\",\n\t\"status\":\"\",\n\t\"issuedTo\":\"\",\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
+					"raw": "{\n\t\"bookId\":\"\",\n\t\"bookName\":\"\",\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"carogory\":\"\",\n\t\"libraryId\":\"\",\n\t\"rackNo\": \"\",\n\t\"status\":\"\",\n\t\"issuedTo\":\"\", \n\t\"dateOfIssued\": null,\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
 				},
 				"description": ""
 			},
@@ -138,7 +138,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"libraryId\":\"\",\n\t\"rachNo\": \"\",\n\t\"status\":\"\",\n\t\"carogory\":\"\",\n\t\"issuedTo\":\"\",\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
+					"raw": "{\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"libraryId\":\"\",\n\t\"rackNo\": \"\",\n\t\"status\":\"\",\n\t\"carogory\":\"\",\n\t\"issuedTo\":\"\",\n    \"dateOfIssued\": null,\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
 				},
 				"description": ""
 			},

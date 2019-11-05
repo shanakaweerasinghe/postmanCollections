@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Library",
+		"_postman_id": "41cc1124-9a77-8b70-db6b-3e2ee4f36db0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getLibrary",
+			"request": {
+				"url": "http://localhost:8082/libraryManagement/libraryList",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addLibrary",
+			"request": {
+				"url": "http://localhost:8082/libraryManagement/insertLibrary",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"libraryId\": \"L002\",\n        \"libraryName\": \"Nenasa\",\n        \"location\": \"Pannala\",\n        \"address\": \"pannala\",\n        \"contactNo\": \"0372246424\",\n        \"status\": \"active\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateLibrary",
+			"request": {
+				"url": "http://localhost:8082/libraryManagement/updateLibrary",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"libraryId\": \"L002\",\n        \"libraryName\": \"Nenasa\",\n        \"location\": \"Pannala\",\n        \"address\": \"pannala\",\n        \"contactNo\": \"0372246424\",\n        \"status\": \"deactive\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeLibrary",
+			"request": {
+				"url": "http://localhost:8082/libraryManagement/deleteLibrary",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"libraryId\": \"L002\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
