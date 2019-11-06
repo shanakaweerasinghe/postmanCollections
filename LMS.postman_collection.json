@@ -10,18 +10,23 @@
 		{
 			"name": "addBooks",
 			"request": {
-				"url": "http://localhost:8092/api/1.0/librarymanagement/books",
+				"url": "http://localhost:8092/api/1.0/librarymanagement/book",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"bookId\":\"\",\n\t\"bookName\":\"\",\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"carogory\":\"\",\n\t\"libraryId\":\"\",\n\t\"rackNo\": \"\",\n\t\"status\":\"\",\n\t\"issuedTo\":\"\", \n\t\"dateOfIssued\": null,\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
+					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
 				},
 				"description": ""
 			},
@@ -59,6 +64,11 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
@@ -73,7 +83,7 @@
 			"name": "removeBook",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/books?bookName=\"aaa\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/book?bookId=\"aaa\"",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -83,11 +93,11 @@
 						"api",
 						"1.0",
 						"librarymanagement",
-						"books"
+						"book"
 					],
 					"query": [
 						{
-							"key": "bookName",
+							"key": "bookId",
 							"value": "\"aaa\"",
 							"equals": true,
 							"description": ""
@@ -96,7 +106,13 @@
 					"variable": []
 				},
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
@@ -105,40 +121,23 @@
 		{
 			"name": "updateBook",
 			"request": {
-				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/books?bookName=\"aaa\"",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8092",
-					"path": [
-						"api",
-						"1.0",
-						"librarymanagement",
-						"books"
-					],
-					"query": [
-						{
-							"key": "bookName",
-							"value": "\"aaa\"",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
+				"url": "http://localhost:8092/api/1.0/librarymanagement/book",
 				"method": "PATCH",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"author\":\"\",\n\t\"edition\":\"\",\n\t\"libraryId\":\"\",\n\t\"rackNo\": \"\",\n\t\"status\":\"\",\n\t\"carogory\":\"\",\n\t\"issuedTo\":\"\",\n    \"dateOfIssued\": null,\n\t\"dateOfPurchase\":\"\",\n\t\"price\":\"\",\n\t\"description\":\"\"\n}"
+					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
 				},
 				"description": ""
 			},
@@ -147,18 +146,23 @@
 		{
 			"name": "addMember",
 			"request": {
-				"url": "http://localhost:8092/api/1.0/librarymanagement/members",
+				"url": "http://localhost:8092/api/1.0/librarymanagement/member",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"memberId\":\"\",\n\t\"name\":\"\",\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"numberOfBookIssued\":\"\",\n\t\"status\":\"\",\n\t\"description\":\"\"\n}"
+					"raw": "{\n        \"memberId\": \"M002\",\n        \"name\": \"Shanaka\",\n        \"nic\": \"912440729v\",\n        \"address\": \"colombo 9\",\n        \"email\": \"shanaka@sliit.lk\",\n        \"contactNo\": \"0750111415\",\n        \"numberOfBookIssued\": \"0\",\n        \"status\": \"active\",\n        \"description\": \"description\"\n}"
 				},
 				"description": ""
 			},
@@ -168,7 +172,7 @@
 			"name": "seacrhMember",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/members?memberName=\"Shanaka\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/member?memberName=\"Shanaka\"",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -178,7 +182,7 @@
 						"api",
 						"1.0",
 						"librarymanagement",
-						"members"
+						"member"
 					],
 					"query": [
 						{
@@ -191,7 +195,13 @@
 					"variable": []
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
@@ -201,7 +211,7 @@
 			"name": "removeMember",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/members?memberName=\"Shanaka\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/member?menberId=\"001\"",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -211,12 +221,12 @@
 						"api",
 						"1.0",
 						"librarymanagement",
-						"members"
+						"member"
 					],
 					"query": [
 						{
-							"key": "memberName",
-							"value": "\"Shanaka\"",
+							"key": "menberId",
+							"value": "\"001\"",
 							"equals": true,
 							"description": ""
 						}
@@ -224,7 +234,13 @@
 					"variable": []
 				},
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
@@ -233,40 +249,23 @@
 		{
 			"name": "updateMember",
 			"request": {
-				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/members?memberName=\"Shanaka\"",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8092",
-					"path": [
-						"api",
-						"1.0",
-						"librarymanagement",
-						"members"
-					],
-					"query": [
-						{
-							"key": "memberName",
-							"value": "\"Shanaka\"",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
+				"url": "http://localhost:8092/api/1.0/librarymanagement/member",
 				"method": "PATCH",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"numberOfBookIssued\":\"\",\n\t\"status\":\"\",\n\t\"description\":\"\"\n}"
+					"raw": "{\n        \"memberId\": \"M002\",\n        \"name\": \"Shanaka\",\n        \"nic\": \"912440729v\",\n        \"address\": \"colombo 9\",\n        \"email\": \"shanaka@sliit.lk\",\n        \"contactNo\": \"0750111415\",\n        \"numberOfBookIssued\": \"0\",\n        \"status\": \"active\",\n        \"description\": \"description\"\n}"
 				},
 				"description": ""
 			},
@@ -282,11 +281,16 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"libraryId\":\"\",\n\t\"libraryName\":\"\",\n\t\"location\":\"\",\n\t\"address\":\"\",\n\t\"contactNo\":\"\",\n\t\"status\":\"\"\n}"
+					"raw": "{\n        \"libraryId\": \"L002\",\n        \"libraryName\": \"Nenasa\",\n        \"location\": \"Pannala\",\n        \"address\": \"pannala\",\n        \"contactNo\": \"0372246424\",\n        \"status\": \"active\"\n    }"
 				},
 				"description": ""
 			},
@@ -319,17 +323,23 @@
 					"variable": []
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "updateLibrary",
+			"name": "removeLibrary",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryName=\"sliitLibrary\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryId=\"L002\"",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -343,25 +353,47 @@
 					],
 					"query": [
 						{
-							"key": "libraryName",
-							"value": "\"sliitLibrary\"",
+							"key": "libraryId",
+							"value": "\"L002\"",
 							"equals": true,
 							"description": ""
 						}
 					],
 					"variable": []
 				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateLibrary",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/library",
 				"method": "PATCH",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"libraryName\":\"\",\n\t\"location\":\"\",\n\t\"address\":\"\",\n\t\"contactNo\":\"\",\n\t\"status\":\"\"\n}"
+					"raw": "{\n        \"libraryId\": \"L002\",\n        \"libraryName\": \"Nenasa\",\n        \"location\": \"Pannala\",\n        \"address\": \"pannala\",\n        \"contactNo\": \"0372246424\",\n        \"status\": \"active\"\n    }"
 				},
 				"description": ""
 			},
@@ -377,11 +409,16 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"librarianId\":\"\",\n\t\"name\":\"\",\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"allocatedLibraryId\":\"\",\n\t\"status\":\"\",\n\t\"details\":\"\"\n}"
+					"raw": "{\r\n\"StaffName\":\"Kasun Perera\",\r\n\"EmpNo\":\"85695\",\r\n\"JoinDate\":\"2018-02-06\",\r\n\"Dob\":\"1996-02-03\",\r\n\"Emailaddress\":\"kasunp@sliit.lk\",\r\n\"Address\":\"Colombo, Sri Lanka\",\r\n\"Isdeleted\":0,\r\n\"IsActive\":1,\r\n\"LogInfo\":\"2019-11-04\",\r\n\"LibraryId\":1,\r\n\"DesignationID\":2\r\n}"
 				},
 				"description": ""
 			},
@@ -414,7 +451,13 @@
 					"variable": []
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
@@ -423,40 +466,23 @@
 		{
 			"name": "updateLibrarian",
 			"request": {
-				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?librarianName=\"0123\"",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8092",
-					"path": [
-						"api",
-						"1.0",
-						"librarymanagement",
-						"librarian"
-					],
-					"query": [
-						{
-							"key": "librarianName",
-							"value": "\"0123\"",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
+				"url": "http://localhost:8092/api/1.0/librarymanagement/librarian",
 				"method": "PATCH",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"\",\n\t\"nic\":\"\",\n\t\"address\":\"\",\n\t\"email\":\"\",\n\t\"contactNo\": \"\",\n\t\"allocatedLibrary\":\"\",\n\t\"status\":\"\",\n\t\"details\":\"\"\n}"
+					"raw": "{\r\n\"StaffName\":\"Kasun Perera\",\r\n\"EmpNo\":\"85695\",\r\n\"JoinDate\":\"2018-02-06\",\r\n\"Dob\":\"1996-02-03\",\r\n\"Emailaddress\":\"kasunp@sliit.lk\",\r\n\"Address\":\"Colombo, Sri Lanka\",\r\n\"Isdeleted\":0,\r\n\"IsActive\":1,\r\n\"LogInfo\":\"2019-11-04\",\r\n\"LibraryId\":1,\r\n\"DesignationID\":2\r\n}"
 				},
 				"description": ""
 			},
@@ -466,7 +492,7 @@
 			"name": "removeLibrarian",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?librarianName=\"0123\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?EmpNo=\"0123\"",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -480,7 +506,7 @@
 					],
 					"query": [
 						{
-							"key": "librarianName",
+							"key": "EmpNo",
 							"value": "\"0123\"",
 							"equals": true,
 							"description": ""
@@ -489,7 +515,55 @@
 					"variable": []
 				},
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addDesignation",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/librarian/designation",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"DesignationID\" : 3,\r\n\"DesignationName\" : \"Assistant\",\r\n\"Isdeleted\":0,\r\n\"IsActive\":1,\r\n\"LogInfo\":\"Created : 2019-11-04\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAlldesignation",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/librarian/designation",
+				"method": "GET",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},

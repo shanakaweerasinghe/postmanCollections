@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "staff",
+		"_postman_id": "415c33d5-5c35-6be7-f001-817e3ace01f4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addStaffMember",
+			"request": {
+				"url": "https://prabashmadusankasl.000webhostapp.com/staffmgt/Staffmember/addStaffMember",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"StaffName\":\"Kasun Perera\",\r\n\"EmpNo\":\"85695\",\r\n\"JoinDate\":\"2018-02-06\",\r\n\"Dob\":\"1996-02-03\",\r\n\"Emailaddress\":\"kasunp@sliit.lk\",\r\n\"Address\":\"Colombo, Sri Lanka\",\r\n\"Isdeleted\":0,\r\n\"IsActive\":1,\r\n\"LogInfo\":\"2019-11-04\",\r\n\"LibraryId\":1,\r\n\"DesignationID\":2\r\n}"
+				},
+				"description": "Add staff member"
+			},
+			"response": []
+		},
+		{
+			"name": "addDesignation",
+			"request": {
+				"url": "https://prabashmadusankasl.000webhostapp.com/staffmgt/Staffmember/addDesignation",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"DesignationID\" : 3,\r\n\"DesignationName\" : \"Assistant\",\r\n\"Isdeleted\":0,\r\n\"IsActive\":1,\r\n\"LogInfo\":\"Created : 2019-11-04\"\r\n}"
+				},
+				"description": "Add Designation to the system"
+			},
+			"response": []
+		},
+		{
+			"name": "selectAllStaffMember",
+			"request": {
+				"url": "https://prabashmadusankasl.000webhostapp.com/staffmgt/Staffmember/selectAllStaffMember",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all isdeleted=0 staff members"
+			},
+			"response": []
+		},
+		{
+			"name": "selectAllDesignation",
+			"request": {
+				"url": "https://prabashmadusankasl.000webhostapp.com/staffmgt/Staffmember/selectAllDesignation",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "get all not deleted designations"
+			},
+			"response": []
+		},
+		{
+			"name": "updateStaffMember",
+			"request": {
+				"url": "https://prabashmadusankasl.000webhostapp.com/staffmgt/Staffmember/updateStaffMember",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"StaffID\" : 2,\r\n\"StaffName\":\"Nadun Perera\",\r\n\"EmpNo\":\"85695\",\r\n\"JoinDate\":\"2018-02-06\",\r\n\"Dob\":\"1996-02-03\",\r\n\"Emailaddress\":\"kasunp@sliit.lk\",\r\n\"Address\":\"Colombo, Sri Lanka\",\r\n\"Isdeleted\":1,\r\n\"IsActive\":1,\r\n\"LogInfo\":\"2019-11-04\",\r\n\"LibraryId\":1,\r\n\"DesignationID\":2\r\n}"
+				},
+				"description": "Update Staff member, to delete update isdeleted flag to 1"
+			},
+			"response": []
+		}
+	]
+}
