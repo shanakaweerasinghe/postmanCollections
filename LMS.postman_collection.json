@@ -20,13 +20,39 @@
 					},
 					{
 						"key": "mock",
-						"value": "true",
+						"value": "false",
 						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
+					"raw": "{\n        \"bookId\": \"004\",\n        \"bookName\": \"Uanthaya\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "IssueBook",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/book/issueBook",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "true",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"bookId\": \"004\",\n        \"bookName\": \"Uanthaya\",\n        \"issuedTo\": \"Shanaka\",\n        \"dateOfIssued\": \"12-08-2019\",\n        \"status\": \"issued\"\n    }"
 				},
 				"description": ""
 			},
@@ -36,7 +62,7 @@
 			"name": "searchBook",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/book?bookName=\"Madolduwa\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/book?bookName=Madoldwua",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -51,7 +77,7 @@
 					"query": [
 						{
 							"key": "bookName",
-							"value": "\"Madolduwa\"",
+							"value": "Madoldwua",
 							"equals": true,
 							"description": ""
 						}
@@ -67,7 +93,32 @@
 					},
 					{
 						"key": "mock",
-						"value": "true",
+						"value": "false",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookId\":\"\",\n\t\"bookName\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "searchAllBooks",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/book",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "mock",
+						"value": "false",
 						"description": ""
 					}
 				],
@@ -83,7 +134,7 @@
 			"name": "removeBook",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/book?bookId=\"aaa\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/book?bookId=004",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -98,7 +149,7 @@
 					"query": [
 						{
 							"key": "bookId",
-							"value": "\"aaa\"",
+							"value": "004",
 							"equals": true,
 							"description": ""
 						}
@@ -131,13 +182,13 @@
 					},
 					{
 						"key": "mock",
-						"value": "true",
+						"value": "false",
 						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"bookId\": \"002\",\n        \"bookName\": \"Madoldwua\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
+					"raw": "{\n        \"bookId\": \"004\",\n        \"bookName\": \"Madoldwua3\",\n        \"author\": \"martin Wickramasinghe\",\n        \"edition\": \"first\",\n        \"category\": \"Novel\",\n        \"libraryId\": \"L001\",\n        \"rackNo\": \"L001-A1\",\n        \"status\": \"available\",\n        \"issuedTo\": null,\n        \"dateOfIssued\": null,\n        \"dateOfPurchase\": \"19-06-2010\",\n        \"price\": \"300.00\",\n        \"description\": \"description\"\n    }"
 				},
 				"description": ""
 			},
@@ -157,7 +208,8 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {
@@ -172,7 +224,7 @@
 			"name": "seacrhMember",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/member?memberName=\"Shanaka\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/member?memberName=Weerasinghe",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -187,7 +239,7 @@
 					"query": [
 						{
 							"key": "memberName",
-							"value": "\"Shanaka\"",
+							"value": "Weerasinghe",
 							"equals": true,
 							"description": ""
 						}
@@ -199,7 +251,26 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "seacrhAllMembers",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/member",
+				"method": "GET",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {},
@@ -211,7 +282,7 @@
 			"name": "removeMember",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/member?menberId=\"001\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/member?menberId=M002",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -226,7 +297,7 @@
 					"query": [
 						{
 							"key": "menberId",
-							"value": "\"001\"",
+							"value": "M002",
 							"equals": true,
 							"description": ""
 						}
@@ -238,7 +309,8 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {},
@@ -260,12 +332,13 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"memberId\": \"M002\",\n        \"name\": \"Shanaka\",\n        \"nic\": \"912440729v\",\n        \"address\": \"colombo 9\",\n        \"email\": \"shanaka@sliit.lk\",\n        \"contactNo\": \"0750111415\",\n        \"numberOfBookIssued\": \"0\",\n        \"status\": \"active\",\n        \"description\": \"description\"\n}"
+					"raw": "{\n        \"memberId\": \"M002\",\n        \"name\": \"Weerasinghe\",\n        \"nic\": \"912440729v\",\n        \"address\": \"colombo 9\",\n        \"email\": \"shanaka@sliit.lk\",\n        \"contactNo\": \"0750111415\",\n        \"numberOfBookIssued\": \"0\",\n        \"status\": \"active\",\n        \"description\": \"description\"\n}"
 				},
 				"description": ""
 			},
@@ -285,12 +358,13 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"libraryId\": \"L002\",\n        \"libraryName\": \"Nenasa\",\n        \"location\": \"Pannala\",\n        \"address\": \"pannala\",\n        \"contactNo\": \"0372246424\",\n        \"status\": \"active\"\n    }"
+					"raw": "{\n        \"name\": \"library4\",\n        \"active\": true,\n        \"location\": \"location4\",\n        \"address\": \"address4\",\n        \"contactNo\": \"+94717155557\"\n}"
 				},
 				"description": ""
 			},
@@ -300,46 +374,7 @@
 			"name": "getLibrary",
 			"request": {
 				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryName=\"sliitLibrary\"",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8092",
-					"path": [
-						"api",
-						"1.0",
-						"librarymanagement",
-						"library"
-					],
-					"query": [
-						{
-							"key": "libraryName",
-							"value": "\"sliitLibrary\"",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "mock",
-						"value": "true",
-						"description": ""
-					}
-				],
-				"body": {},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "removeLibrary",
-			"request": {
-				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryId=\"L002\"",
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryId=5dc59e36a5b8c13c0c483fd5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -354,7 +389,124 @@
 					"query": [
 						{
 							"key": "libraryId",
-							"value": "\"L002\"",
+							"value": "5dc59e36a5b8c13c0c483fd5",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getActiveLibrary",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/library/active",
+				"method": "GET",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getLibrarystaf",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library/staff?libraryId=5dc50f824d2ea3094e15fdc5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"library",
+						"staff"
+					],
+					"query": [
+						{
+							"key": "libraryId",
+							"value": "5dc50f824d2ea3094e15fdc5",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAllLibrary",
+			"request": {
+				"url": "http://localhost:8092/api/1.0/librarymanagement/library",
+				"method": "GET",
+				"header": [
+					{
+						"key": "mock",
+						"value": "true",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removeLibrary",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryId=5dc59e36a5b8c13c0c483fd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"library"
+					],
+					"query": [
+						{
+							"key": "libraryId",
+							"value": "5dc59e36a5b8c13c0c483fd5",
 							"equals": true,
 							"description": ""
 						}
@@ -366,7 +518,8 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {},
@@ -377,7 +530,29 @@
 		{
 			"name": "updateLibrary",
 			"request": {
-				"url": "http://localhost:8092/api/1.0/librarymanagement/library",
+				"url": {
+					"raw": "http://localhost:8092/api/1.0/librarymanagement/library?libraryId=5dc59e36a5b8c13c0c483fd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"api",
+						"1.0",
+						"librarymanagement",
+						"library"
+					],
+					"query": [
+						{
+							"key": "libraryId",
+							"value": "5dc59e36a5b8c13c0c483fd5",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
 				"method": "PATCH",
 				"header": [
 					{
@@ -388,12 +563,13 @@
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"libraryId\": \"L002\",\n        \"libraryName\": \"Nenasa\",\n        \"location\": \"Pannala\",\n        \"address\": \"pannala\",\n        \"contactNo\": \"0372246424\",\n        \"status\": \"active\"\n    }"
+					"raw": "{\n        \"name\": \"library11updated\",\n        \"active\": true\n    }"
 				},
 				"description": ""
 			},
@@ -427,35 +603,14 @@
 		{
 			"name": "searchLibrarian",
 			"request": {
-				"url": {
-					"raw": "http://localhost:8092/api/1.0/librarymanagement/librarian?librarianName=\"0123\"",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8092",
-					"path": [
-						"api",
-						"1.0",
-						"librarymanagement",
-						"librarian"
-					],
-					"query": [
-						{
-							"key": "librarianName",
-							"value": "\"0123\"",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
+				"url": "http://localhost:8092/api/1.0/librarymanagement/librarian",
 				"method": "GET",
 				"header": [
 					{
 						"key": "mock",
 						"value": "true",
-						"description": ""
+						"description": "",
+						"disabled": true
 					}
 				],
 				"body": {},

@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "8713bbf8-3da5-4203-b735-ee9077f4b15e",
+		"name": "Library Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://library-management-system-esad.herokuapp.com/library"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Library",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"library4\",\n        \"active\": true,\n        \"location\": \"location4\",\n        \"address\": \"address4\",\n        \"contactNo\": \"+94717155557\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://library-management-system-esad.herokuapp.com/library"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://library-management-system-esad.herokuapp.com/library/5dc5a4a475329a0025c25bfb"
+			},
+			"response": []
+		},
+		{
+			"name": "Gat All Active Library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://library-management-system-esad.herokuapp.com/activelibrary"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Library",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"library3updated\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://library-management-system-esad.herokuapp.com/library/5dc59e4fa5b8c13c0c483fd7"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Libeary",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://library-management-system-esad.herokuapp.com/library/5dc59e4fa5b8c13c0c483fd7"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Staff for Library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://library-management-system-esad.herokuapp.com/library/5dc50f824d2ea3094e15fdc5/staff"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
